@@ -20,8 +20,7 @@ func RepositoryAuth(db *gorm.DB) *repository {
 
 func (r *repository) GetUserById(ID int) (models.User, error) {
 	var user models.User
-	query := "SELECT * From users WHERE id = ?"
-	err := r.db.Raw(query, ID).Scan(&user).Error
+	err := r.db.First(&user, ID).Scan(&user).Error
 	return user, err
 }
 
