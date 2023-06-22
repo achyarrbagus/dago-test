@@ -115,7 +115,7 @@ kamu bisa mendapat kan semua data user yang terdaftar dengan menggunakan api url
 
 ## GetUserById
 
-kamu bisa mendapat kan semua data user yang terdaftar dengan menggunakan api url GET: "/api/v1/user/:id"
+kamu bisa mendapat kan semua data user yang terdaftar berdasarkan id dengan menggunakan api url GET: "/api/v1/user/:id"
 
 ## Response
 
