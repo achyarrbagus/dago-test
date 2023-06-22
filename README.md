@@ -17,7 +17,8 @@ kamu bisa melakukan pendaftaran dengan menggunakan api url POST:  "/api/v1/sign-
 
 - **Code**: 200 OK
 - **Content-Type**: application/json
-```{
+```
+{
     "code": 200,
     "data": {
         "id": 6,
