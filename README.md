@@ -11,10 +11,30 @@ kamu bisa melakukan pendaftaran dengan menggunakan api url POST:  "/api/v1/sign-
     "phone": "123",
     "Address": "bekasi"
 }
-```
-ketika username atau pun email kamu sudah pernah digunakan akan mengembalikan response error
 
+```
 ## Response
+
+- **Code**: 200 OK
+- **Content-Type**: application/json
+```{
+    "code": 200,
+    "data": {
+        "id": 6,
+        "username": "achyarbagus",
+        "email": "achyarrbagus@gmail.com",
+        "phone": "123",
+        "password": "$2a$10$mwNVE6ELVjrnUeUfJxpX7.mCxwg1xbO2Jzfh3rqQVfcmbc9XUdY7C",
+        "address": "bekasi"
+    }
+}
+```
+
+ketika username atau pun email kamu sudah pernah digunakan akan mengembalikan response error
+## Response
+- **Code**: 500
+- **Content-Type**: application/json
+
 ```
 {
   "code": 500,
@@ -26,16 +46,33 @@ ketika username atau pun email kamu sudah pernah digunakan akan mengembalikan re
 
 kamu bisa melakukan login dengan menggunakan api url POST:  "/api/v1/sign-in"
 
-## Response
+## Request
 ```
 {
     "username":"achyarbagus",
     "password":"123"
 }
 ```
-ketika username kamu belum terdaftar maka akan mengembalikan response error
-
 ## Response
+
+- **Code**: 200 OK
+- **Content-Type**: application/json
+
+```
+{
+    "code": 200,
+    "data": {
+        "username": "achyarbagus",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc0NjE2ODAsImlkIjo2fQ.5L-xOsX5VtasxhgKUbrBEZA4hsbkBxLvKP8D7xtazdM",
+        "userId": 6
+    }
+}
+```
+
+ketika username kamu belum terdaftar maka akan mengembalikan response error
+- **Code**: 500 
+- **Content-Type**: application/json
+    
 ```json
 {
     "code": 404,
@@ -50,8 +87,6 @@ kamu bisa mendapat kan semua data user yang terdaftar dengan menggunakan api url
 
 - **Code**: 200 OK
 - **Content-Type**: application/json
-
-### Example
 
 ```json
 {
@@ -76,3 +111,41 @@ kamu bisa mendapat kan semua data user yang terdaftar dengan menggunakan api url
     ]
 }
 ```
+
+## GetUserById
+
+kamu bisa mendapat kan semua data user yang terdaftar dengan menggunakan api url GET: "/api/v1/user/:id"
+
+## Response
+
+- **Code**: 200 OK
+- **Content-Type**: application/json
+
+```json
+{
+    "code": 200,
+    "data": {
+        "id": 1,
+        "username": "baga",
+        "email": "ass@gmail.com",
+        "phone": "123",
+        "password": "$2a$10$OVd1yDhKhMXpyS2hJwCzQeydoAvfU8O7I5LZ.0ar9AS11gIDCHRlG",
+        "address": "bekasi"
+    }
+}
+
+```
+ketika data user kamu belum terdaftar maka akan mengembalikan response error
+
+## Response
+
+- **Code**: 404 
+- **Content-Type**: application/json
+    
+```json
+{
+    "code": 404,
+    "message": "record not found"
+}
+```
+
