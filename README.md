@@ -29,7 +29,7 @@ DB_PASSWORD = 123 | your Db password
 DB_NAME = dago-test | your Db name
 PORT = 5000 | your Aplication port
 ```
-4. Buka aplikasi di browser dengan URL: `http://localhost:5000`
+3. Buka aplikasi di browser dengan URL: `http://localhost:5000`
 
 
 ## Sign Up 
