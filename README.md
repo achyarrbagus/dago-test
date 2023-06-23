@@ -19,7 +19,7 @@ Langkah-langkah untuk menginstal proyek ini:
 
 Cara menggunakan proyek ini:
 
-1. Jalankan aplikasi: `npm start`
+1. Jalankan aplikasi: `go run . | go run main.go`
 2. konnfigurasi file .env
 ```
 DB_HOST = localhost | your host
