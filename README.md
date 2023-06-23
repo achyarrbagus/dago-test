@@ -1,3 +1,37 @@
+# Dago Test
+
+Web Api Aplication with golang echo and mysql.
+
+## Daftar Isi
+
+- [Instalasi](#instalasi)
+
+
+## Instalasi
+
+Langkah-langkah untuk menginstal proyek ini:
+
+1. Clone repositori ini: `https://github.com/achyarrbagus/dago-test.git`
+2. Masuk ke direktori proyek: `cd dago-test`
+3. Instal dependensi: `go mod init`
+
+## Penggunaan
+
+Cara menggunakan proyek ini:
+
+1. Jalankan aplikasi: `npm start`
+2. konnfigurasi file .env
+```
+DB_HOST = localhost | your host
+DB_PORT = 5432 | your Db port
+DB_USER = root | your Db user
+DB_PASSWORD = 123 | your Db password
+DB_NAME = dago-test | your Db name
+PORT = 5000 | your Aplication port
+```
+4. Buka aplikasi di browser dengan URL: `http://localhost:5000`
+
+
 ## Sign Up 
 
 kamu bisa melakukan pendaftaran dengan menggunakan api url POST:  "/api/v1/sign-up" 
@@ -149,4 +183,5 @@ ketika data user kamu belum terdaftar maka akan mengembalikan response error
     "message": "record not found"
 }
 ```
+
 
